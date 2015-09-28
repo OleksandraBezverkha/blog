@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title
+      Blog|#{yield(:title)}
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %header.navbar.navbar-fixed-top.navbar-inverse
+      .navbar-inner
+        .container
+          = link_to "Blog", root_path, id: "logo"
+          %nav
+            / <ul class="nav pull-right">
+            / <p>Hello Guest!</p>
+            / </ul>
+            %p.navbar-text.pull-right
+              - if user_signed_in?
+                Hello,
+                = succeed "." do
+                  %strong= current_user.email
+                = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link',class:"btn btn-default"
+                |
+                \#{link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link',class:"btn btn-default"}
+              - else
+                Hello,guest!
+                \#{link_to "Sign up", new_user_registration_path, :class => 'navbar-link',class:"btn btn-default"} |
+                \#{link_to "Login", new_user_session_path, :class => 'navbar-link',class:"btn btn-default"}
+    - if notice
+      %p.alert.alert-success= notice
+    - if alert
+      %p.alert.alert-danger= alert
+    = yield
