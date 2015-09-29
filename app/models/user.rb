@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
                 :case_sensitive => false
             } # etc.
   validate :validate_username
+  # attr_accessible :user_id, :name, :image, :remote_image_url
+
+  mount_uploader :image, ImageUploader
   def validate_username
     if User.where(email: username).exists?
       errors.add(:username, :invalid)

@@ -31,6 +31,10 @@
             %i (we need your current password to confirm your changes)
             %br/
             = f.password_field :current_password, autocomplete: "off",class:"form-control"
+            .form-group
+            %h4 avatar
+            = f.file_field :image
+            = image_tag(@user.image) if @user.image?
           .actions
             = f.submit "Update",class:"btn btn-default"
 .row
