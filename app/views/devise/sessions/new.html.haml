@@ -6,9 +6,12 @@
         .panel-heading
           %h3 Log in
           .form-group
-            = f.label :email
+            -#= f.label :email
+            -#%br/
+            -#= f.email_field :email, autofocus: true,class:"form-control"
+            = f.label :login
             %br/
-            = f.email_field :email, autofocus: true,class:"form-control"
+            = f.text_field :login, autofocus: true,class:"form-control"
           .form-group
             = f.label :password
             %br/

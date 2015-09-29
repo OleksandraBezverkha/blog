@@ -67,7 +67,7 @@ p {
   color: whitesmoke;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 12px;
+  padding-top: 20px;
   font-weight: bold;
   line-height: 1;
   font-family: fantasy;
@@ -80,7 +80,7 @@ p {
 .navbar {
   background-color: #1e3367;
   border-color: white;
-  border-style:dashed;
+  border-style:dashed none;
   border-width: 5px;
 
 }

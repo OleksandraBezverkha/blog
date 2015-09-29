@@ -7,6 +7,10 @@
         .panel-heading
           %h3 Edit #{resource_name.to_s.humanize}
           .form-group
+            = f.label :username
+            %br/
+            = f.text_field :username, autofocus: true,class:"form-control"
+          .form-group
             = f.label :email
             %br/
             = f.email_field :email, autofocus: true,class:"form-control"
