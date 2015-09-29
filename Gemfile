@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "haml-rails", "~> 0.9"
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'carrierwave'
+gem 'rmagick', '2.15.0'
+gem 'mini_magick', '~> 4.2.10'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
