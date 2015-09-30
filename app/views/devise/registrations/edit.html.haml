@@ -32,11 +32,18 @@
             %br/
             = f.password_field :current_password, autocomplete: "off",class:"form-control"
             .form-group
-            %h4 avatar
+            %strong Avatar
+            %br/
             = f.file_field :image
-            = image_tag(@user.image) if @user.image?
+            %br/
+            -if @user.image?
+              = image_tag(@user.image.thumb,class:"img-circle")
+              Remove avatar
+              = f.check_box :remove_image
+            -else
+              = image_tag(current_user.image.url, size: "200x200", alt: "Avatar",class:"img-circle")
           .actions
-            = f.submit "Update",class:"btn btn-default"
+            = f.submit "Update",class:"btn btn-success btn-sm"
 .row
   .col-md-4
   .col-md-4

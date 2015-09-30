@@ -26,9 +26,10 @@
             %br/
             = f.password_field :password_confirmation, autocomplete: "off",class:"form-control"
           .form-group
-            %h4 avatar
+            %strong avatar
             = f.file_field :image
-            = image_tag(@user.image) if @user.image?
+            = image_tag(@user.image.thumb,class:"img-circle") if @user.image?
+            -#= image_tag(@user.image.thumb.url) unless @user.image?
           .actions
             = f.submit "Sign up",class:"btn btn-success btn-sm"
             = render "devise/shared/links"
