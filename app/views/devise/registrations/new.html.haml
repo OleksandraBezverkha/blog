@@ -28,8 +28,11 @@
           .form-group
             %strong avatar
             = f.file_field :image
-            = image_tag(@user.image.thumb,class:"img-circle") if @user.image?
-            -#= image_tag(@user.image.thumb.url) unless @user.image?
+            %br/
+            -if @user.image?
+              = image_tag(@user.image.thumb,class:"img-circle")
+            -else
+              = image_tag(@user.image.url, size: "200x200", alt: "Avatar",class:"img-circle")
           .actions
             = f.submit "Sign up",class:"btn btn-success btn-sm"
             = render "devise/shared/links"
