@@ -25,6 +25,7 @@
                 = image_tag(current_user.image.url, size: "30x30", alt: "Avatar",class:"img-circle") unless current_user.image?
                 = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link',class:"btn btn-default"
                 \#{link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link',class:"btn btn-default"}
+                =link_to 'create post',new_posts_path
               - else
                 Hello,guest!
                 \#{link_to "Sign up", new_user_registration_path, :class => 'navbar-link',class:"btn btn-default"} |

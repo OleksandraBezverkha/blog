@@ -1,0 +1,15 @@
+=form_for @post do |f|
+  .row
+    .col-md-4
+    .col-md-4
+      .panel-default
+        .panel-heading
+          %h3 Create post
+          .form-group
+            = f.label :title
+            =f.text_field :title, autofocus: true,class:"form-control"
+          .form-group
+            = f.label :content
+            =f.text_area :content,class:"form-control"
+          .actions
+          = f.submit "Create post",class:"btn btn-success btn-sm"
