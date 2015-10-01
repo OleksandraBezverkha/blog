@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 html {
-  overflow-y: scroll;
+ // overflow-y: scroll;
 }
 
 body {
@@ -48,6 +48,9 @@ h3 {
   text-align: center;
   color: #999;
 }
+h5 {
+  color: #696969;
+}
 
 
 p {
@@ -62,7 +65,7 @@ p {
   color: whitesmoke;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 20px;
+  padding-top: 18px;
   font-weight: bold;
   line-height: 1;
   font-family: fantasy;
@@ -80,6 +83,13 @@ p {
   //margin-left: 10%;
   //margin-right: 10%;
 }
+  .navbar-inner{
+    height: 60px;
+  }
+  .navbar-right{
+    margin-top: 13px;
+    color: #c0bbb5;
+  }
 
 
 

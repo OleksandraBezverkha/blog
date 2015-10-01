@@ -1,0 +1,15 @@
+-@posts.each do|post|
+  .row
+    .col-md-4
+    .col-md-4
+      %br
+        -if post.user.image?
+          = image_tag(post.user.image.small_thumb,class:"img-circle")
+        -else
+          = image_tag(post.user.image.url, size: "30x30", alt: "Avatar",class:"img-circle")
+      title:
+      =post.title
+      %br
+      content:
+      =post.content
+

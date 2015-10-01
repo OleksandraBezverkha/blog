@@ -1,23 +1,17 @@
 class PostsController < ApplicationController
-   before_action :signed_in_user, only: [:create, :destroy]
+   # before_action :signed_in_user
   def new
     @post=Post.new
+  end
+  def index
+    @posts=Post.all
   end
   def create
     @post=current_user.posts.build(post_params)
     if @post.save
-      redirect_to new_posts_path
+      redirect_to root_path
     end
   end
-
-
-
-
-
-
-
-
-
 
 
 

@@ -36,8 +36,8 @@
             %br/
             = f.file_field :image
             %br/
-            -if @user.image?
-              = image_tag(@user.image.thumb,class:"img-circle")
+            -if current_user.image?
+              = image_tag(current_user.image.thumb,class:"img-circle")
               Remove avatar
               = f.check_box :remove_image
             -else
