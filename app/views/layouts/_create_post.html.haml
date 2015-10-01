@@ -17,7 +17,7 @@
                 =f.text_field :title, autofocus: true,class:"form-control"
               .form-group
                 = f.label :content
-                =f.text_area :content,class:"form-control"
+                =f.text_area :content,class:"form-control", max:10000
         -#.actions
         .modal-footer
           = f.submit "Create post",class:"btn btn-success btn-sm"

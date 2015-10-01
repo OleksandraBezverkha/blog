@@ -1,15 +1,20 @@
 -@posts.each do|post|
   .row
     .col-md-4
-    .col-md-4
-      %br
+    .col-sm-1
+      .center
         -if post.user.image?
-          = image_tag(post.user.image.small_thumb,class:"img-circle")
+          = image_tag(post.user.image.for_post,class:"img-circle")
         -else
-          = image_tag(post.user.image.url, size: "30x30", alt: "Avatar",class:"img-circle")
-      title:
-      =post.title
-      %br
-      content:
-      =post.content
+          = image_tag(post.user.image.url, size: "50x50", alt: "Avatar",class:"img-circle")
+        %br
+          =post.user.username
+    .col-sm-3
+      .panel.panel-default
+        .panel-heading
+          %strong
+            =post.title
+        .panel-body
+          %h5
+            =truncate(post.content, length: 250, separator: ' ', omission: '') #{ link_to  ' ...more =>',  post_path(post.id) }
 

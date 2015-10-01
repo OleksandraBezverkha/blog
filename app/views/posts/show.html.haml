@@ -1,0 +1,18 @@
+.row
+  .col-md-4
+  .col-sm-1
+    .center
+      -if @post.user.image?
+        = image_tag(@post.user.image.for_post,class:"img-circle")
+      -else
+        = image_tag(@post.user.image.url, size: "50x50", alt: "Avatar",class:"img-circle")
+      %br
+        =@post.user.username
+  .col-sm-3
+    .panel.panel-default
+      .panel-heading
+        %strong
+          =@post.title
+      .panel-body
+        %h5
+          =@post.content
