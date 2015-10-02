@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   devise_for :users
   #get "posts/index"
   root  'posts#index'
-  resource :posts
+  resources :posts
 
 
   # The priority is based upon order of creation: first created -> highest priority.

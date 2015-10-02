@@ -7,13 +7,24 @@ class PostsController < ApplicationController
     @posts=Post.all
   end
   def show
+    # p params.inspect
     @post=Post.find(params[:id])
   end
   def create
     @post=current_user.posts.build(post_params)
     if @post.save
       redirect_to root_path
+    else
+      redirect_to root_path
     end
+  end
+  def destroy
+
+    @post=Post.find(params[:id])
+    if current_user == @post.user
+        @post.destroy
+    end
+     redirect_to root_path
   end
 
 

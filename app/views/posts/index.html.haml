@@ -1,6 +1,6 @@
 -@posts.each do|post|
   .row
-    .col-md-4
+    .col-md-3
     .col-sm-1
       .center
         -if post.user.image?
@@ -8,13 +8,23 @@
         -else
           = image_tag(post.user.image.url, size: "50x50", alt: "Avatar",class:"img-circle")
         %br
-          =post.user.username
+        %span.name
+          %strong
+            =post.user.username
     .col-sm-3
       .panel.panel-default
         .panel-heading
-          %strong
-            =post.title
+          %span.name
+            %strong
+              =link_to post.title,post_path(post.id)
+          %span.timestamp
+            =time_ago_in_words(post.created_at)
+            ago
+          .pull-right
+            -if user_signed_in? && current_user.id == post.user.id
+              =link_to "delete", post, method: :delete
         .panel-body
           %h5
-            =truncate(post.content, length: 250, separator: ' ', omission: '') #{ link_to  ' ...more =>',  post_path(post.id) }
+            =truncate(post.content, length: 250, separator: ' ', omission: '') { link_to  ' ...read more',  post_path(post.id) }
+
 

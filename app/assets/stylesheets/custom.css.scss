@@ -62,7 +62,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: whitesmoke;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 18px;
@@ -72,11 +72,11 @@ p {
 }
 
 #logo:hover {
-  color: #ddebf3;
+  color: #f3e5e7;
   text-decoration: none;
 }
 .navbar {
-  background-color: #1e3367;
+  background-color: #491634;
   border-color: white;
   border-style:dashed none;
   border-width: 5px;
@@ -93,3 +93,21 @@ p {
 .panel-default{
   word-wrap: break-word;
 }
+.timestamp{
+  color: #999;
+}
+.name{
+  color: #491634;
+}
+
+A{
+  color: #491634;
+}
+A:active{
+  color: #6a1b60;
+}
+a:hover, a:focus {
+  color: #6a1b60;
+}
+
+
