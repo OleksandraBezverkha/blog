@@ -11,11 +11,16 @@ class PostsController < ApplicationController
     @post=Post.find(params[:id])
   end
   def create
-    @post=current_user.posts.build(post_params)
+    @post=current_user.posts.create(post_params)
     if @post.save
       redirect_to root_path
     else
-      redirect_to root_path
+      flash[:notice] = 'error'
+      respond_to do |format|
+        format.html { redirect_to :back }
+        format.js
+      end
+
     end
   end
   def destroy

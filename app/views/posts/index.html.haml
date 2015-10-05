@@ -1,12 +1,14 @@
+-#-if flash[:error]
+-#  =flash[:error]
 -@posts.each do|post|
   .row
     .col-md-3
     .col-sm-1
       .center
-        -if post.user.image?
-          = image_tag(post.user.image.for_post,class:"img-circle")
-        -else
+        -if post.user.image.for_post.blank? || !post.user.image.for_post.file.exists?
           = image_tag(post.user.image.url, size: "50x50", alt: "Avatar",class:"img-circle")
+        -else
+          = image_tag(post.user.image.for_post,class:"img-circle")
         %br
         %span.name
           %strong
@@ -25,6 +27,6 @@
               =link_to "delete", post, method: :delete
         .panel-body
           %h5
-            =truncate(post.content, length: 250, separator: ' ', omission: '') { link_to  ' ...read more',  post_path(post.id) }
+            =truncate(post.content, length: 250, separator: ' ') { link_to  ' read more',  post_path(post.id) }
 
 

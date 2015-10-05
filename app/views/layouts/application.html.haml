@@ -17,12 +17,13 @@
               Hello,
               = succeed "" do
                 %strong= current_user.username
-              -if current_user.image?
-                = image_tag(current_user.image.small_thumb,class:"img-circle")
-              -else
+              -if current_user.image.small_thumb.blank? || !current_user.image.small_thumb.file.exists?
                 = image_tag(current_user.image.url, size: "30x30", alt: "Avatar",class:"img-circle")
+              -else
+                = image_tag(current_user.image.small_thumb,class:"img-circle")
               = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link',class:"btn btn-default"
-              = render "layouts/create_post"
+              -#= link_to 'Create post', new_post_path, :class => 'navbar-link',class:"btn btn-default"
+              = render  :partial =>"posts/create_post"
               #{link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link',class:"btn btn-default"}
             - else
               Hello,guest!
