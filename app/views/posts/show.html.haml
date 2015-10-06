@@ -3,7 +3,7 @@
   .col-sm-1
     .center
       -if @post.user.image.for_post.blank? || !@post.user.image.for_post.file.exists?
-        = image_tag(@post.user.image.url, size: "50x50", alt: "Avatar",class:"img-circle")
+        = image_tag("default.png", size: "50x50", alt: "Avatar",class:"img-circle")
       -else
         = image_tag(@post.user.image.for_post,class:"img-circle")
       %br
