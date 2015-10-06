@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :posts, dependent: :delete_all
   attr_accessor :login
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :confirmable,:registerable,
          :recoverable, :rememberable, :trackable, :validatable,:authentication_keys => [:login]
   validates :username,
             :presence => true,

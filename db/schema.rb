@@ -16,16 +16,6 @@ ActiveRecord::Schema.define(version: 20150930144712) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "microposts", force: :cascade do |t|
-    t.string   "title"
-    t.string   "content"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "microposts", ["user_id"], name: "index_microposts_on_user_id", using: :btree
-
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.string   "content"
@@ -47,6 +37,10 @@ ActiveRecord::Schema.define(version: 20150930144712) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "username"
@@ -57,6 +51,5 @@ ActiveRecord::Schema.define(version: 20150930144712) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
-  add_foreign_key "microposts", "users"
   add_foreign_key "posts", "users"
 end

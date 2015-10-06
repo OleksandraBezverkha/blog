@@ -265,4 +265,6 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   config.authentication_keys = [ :login ]
   config.scoped_views = true
+  # config.mailer = "Devise::Mailer"
+  # config.mailer_sender = "blog.office111@gmail.com"
 end
