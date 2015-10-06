@@ -28,5 +28,8 @@
         .panel-body
           %h5
             =truncate(post.content, length: 250, separator: ' ') { link_to  ' read more',  post_path(post.id) }
+.row
+  .col-md-5
+  = paginate @posts,:theme => 'twitter-bootstrap-3'
 
 

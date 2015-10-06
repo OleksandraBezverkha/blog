@@ -11,6 +11,7 @@
 #
 
 class Post < ActiveRecord::Base
+  paginates_per 5
   belongs_to :user
   default_scope ->{order('created_at DESC')}
   validates :user_id, presence: true
