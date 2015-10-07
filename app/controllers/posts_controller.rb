@@ -5,10 +5,12 @@ class PostsController < ApplicationController
   end
   def index
     @posts=Post.all.page(params[:page]).per(3)
-  end
+
+    end
   def show
     # p params.inspect
     @post=Post.find(params[:id])
+
   end
   def create
     @post=current_user.posts.create(post_params)

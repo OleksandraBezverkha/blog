@@ -1,0 +1,25 @@
+- comments(post).each  do|comment|
+  .row
+    .col-md-2
+      .center
+        -if comment.user.image.for_post.blank? || !comment.user.image.for_post.file.exists?
+          = image_tag("default.png", size: "50x50", alt: "Avatar",class:"img-circle")
+        -else
+          = image_tag(comment.user.image.for_post,class:"img-circle")
+        %br
+        %span.name
+          %strong
+            =comment.user.username
+    .col-md-8
+      .panel.panel-default
+        .panel-heading
+          %span.name
+          %span.timestamp
+            =time_ago_in_words(comment.created_at)
+            ago
+          .pull-right
+            -if user_signed_in?
+              =link_to "delete", comment, method: :delete, remote: true
+        .panel-body
+          %h5
+            =comment.content

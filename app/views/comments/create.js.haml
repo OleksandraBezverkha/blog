@@ -1,0 +1,2 @@
+$('.com##{@post.id}').html("#{escape_javascript(render('comments/index', post: @post))}");
+$('#comment_content').val('')

@@ -1,0 +1,9 @@
+=form_for(Comment.new ,remote: true ) do |f|
+  -if user_signed_in?
+    = f.label :content
+    =f.hidden_field :post_id, :value=> post.id
+    .comment_cont
+      =f.text_area :content,class:"form-control"
+      %br
+    .actions
+      = f.submit "Create comment",class:"btn btn-default"

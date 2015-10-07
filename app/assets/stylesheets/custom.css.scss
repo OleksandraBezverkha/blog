@@ -99,7 +99,7 @@ p {
 .name{
   color: #491634;
 }
-
+//a
 A{
   color: #491634;
 }
@@ -109,5 +109,16 @@ A:active{
 a:hover, a:focus {
   color: #6a1b60;
 }
-
+//pagination
+.pagination > li > a, .pagination > li > span {
+  color: #491634;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+  background-color: #491634;
+  border-color: #491634;
+  color: #fff;
+}
+.pagination > li > a:hover, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:focus {
+  color: #6a1b60;
+}
 
