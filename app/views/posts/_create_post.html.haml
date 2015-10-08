@@ -12,8 +12,6 @@
             .col-md-2
             .col-md-8
               %h5
-                -if flash[:error]
-                  =flash[:error]
                 .form-group
                   =f.label :title
                   =f.text_field :title, autofocus: true,class:"form-control",:required=>"required","aria-required"=>"true",:oninvalid=>"this.setCustomValidity('Pleas enter title')",:oninput=>"setCustomValidity('')",:maxlength=>"150"

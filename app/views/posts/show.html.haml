@@ -1,6 +1,6 @@
 .row
   .col-md-3
-  .col-sm-1
+  .col-md-1
     .center
       -if @post.user.image.for_post.blank? || !@post.user.image.for_post.file.exists?
         = image_tag("default.png", size: "50x50", alt: "Avatar",class:"img-circle")
@@ -10,19 +10,22 @@
       %span.name
         %strong
           =@post.user.username
-  .col-sm-3
+  .col-md-4
     .panel.panel-default
       .panel-heading
         %span.name
           %strong
             =@post.title
         %span.timestamp
-          .pull-right
-            =time_ago_in_words(@post.created_at)
-            ago
+          =time_ago_in_words(@post.created_at)
+          ago
+        .pull-right
+          -if user_signed_in? && current_user.id == @post.user.id
+            =link_to "delete", @post, method: :delete
       .panel-body
         %h5
           =@post.content
       .panel-footer
-        -if user_signed_in? && current_user.id == @post.user.id
-          =link_to "delete", @post, method: :delete
+        = render 'comments/new', post: @post
+    .com
+      = render 'comments/index', post_id: @post.id

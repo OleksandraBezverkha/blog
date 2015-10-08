@@ -1,2 +1,3 @@
-$('.com##{@post.id}').html("#{escape_javascript(render('comments/index', post: @post))}");
+$('.com').html("#{escape_javascript(render'comments/index', post_id: @post.id)}");
 $('#comment_content').val('')
+$("#error_com").html("#{@error_comment}");

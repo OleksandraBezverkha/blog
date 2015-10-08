@@ -8,21 +8,19 @@ class PostsController < ApplicationController
 
     end
   def show
-    # p params.inspect
+     # p params.inspect
     @post=Post.find(params[:id])
-
-  end
+    @comments = @post.comments.page(params[:page]).per(3)
+    end
   def create
     @post=current_user.posts.create(post_params)
     if @post.save
       redirect_to root_path
     else
-      flash[:notice] = 'error'
       respond_to do |format|
         format.html { redirect_to :back }
         format.js
       end
-
     end
   end
   def destroy
