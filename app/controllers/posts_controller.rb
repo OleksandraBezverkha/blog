@@ -4,8 +4,12 @@ class PostsController < ApplicationController
     @post=Post.new
   end
   def index
-    @posts=Post.all.page(params[:page]).per(3)
-
+    @tags = Post.tag_counts_on(:tags).most_used(15)
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag]).page(params[:page]).per(3)
+    else
+      @posts=Post.all.page(params[:page]).per(3)
+    end
     end
   def show
      # p params.inspect
@@ -37,6 +41,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content, :title)
+    params.require(:post).permit(:title,:content, :tag_list)
   end
 end

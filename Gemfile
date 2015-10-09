@@ -33,6 +33,7 @@ gem "twitter-bootstrap-rails"
 gem 'bootstrap-modal-rails'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
+gem 'acts-as-taggable-on'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

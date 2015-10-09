@@ -132,3 +132,13 @@ a:hover, a:focus {
 #error_explanation{
   color: #710508;
 }
+
+
+#tag_cloud {
+  width: 400px;
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+}
+

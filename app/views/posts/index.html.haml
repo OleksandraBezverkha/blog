@@ -28,6 +28,19 @@
         .panel-body
           %h5
             =truncate(post.content, length: 250, separator: ' ') { link_to  ' read more',  post_path(post.id) }
+            -#.list-group
+            -#  - @tags.each do |t|
+            -#    .list-group-item.clip
+            -#      = link_to t, tag_path(t.name)
+            %br
+              Tags:
+              = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
+        -##tag_cloud
+        -#  - tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class|
+        -#    = link_to tag.name, tag_path(tag.name), class: css_class
+        -#Tags: #{raw article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')}
+        -#Tags: #{raw article.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ')}
+
 .center
   = paginate @posts,:theme => 'twitter-bootstrap-3'
 
