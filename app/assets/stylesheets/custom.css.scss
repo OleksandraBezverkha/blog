@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 section {
@@ -98,6 +98,7 @@ p {
 }
 .name{
   color: #491634;
+//text-align: center;
 }
 //a
 A{
@@ -132,13 +133,13 @@ a:hover, a:focus {
 #error_explanation{
   color: #710508;
 }
-
-
-#tag_cloud {
-  width: 400px;
-  line-height: 1.6em;
-  .s { font-size: 0.8em; }
-  .m { font-size: 1.2em; }
-  .l { font-size: 1.8em; }
+.ava{
+  margin-left: -80px;
+  margin-bottom: -95px;
 }
 
+.pull-left
+{
+  margin-left: 5px;
+  margin-right: 5px;
+}

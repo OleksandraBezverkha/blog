@@ -1,30 +1,32 @@
 -#-if flash[:error]
 -#  =flash[:error]
--@posts.each do|post|
-  .row
-    .col-md-3
-    .col-md-1
-      .center
+.row
+  .col-md-4
+  .col-md-4
+    -@posts.each do|post|
+      .ava
         -if post.user.image.for_post.blank? || !post.user.image.for_post.file.exists?
           = image_tag("default.png", size: "50x50", alt: "Avatar",class:"img-circle")
         -else
           = image_tag(post.user.image.for_post,class:"img-circle")
         %br
-        %span.name
+        .name
           %strong
             =post.user.username
-    .col-md-4
+      %br
       .panel.panel-default
         .panel-heading
-          %span.name
-            %strong
-              =link_to post.title,post_path(post.id)
-          %span.timestamp
+          -#.row
+          .pull-left
+            .name
+              %strong
+                =link_to post.title,post_path(post.id)
+          .timestamp
             =time_ago_in_words(post.created_at)
             ago
-          .pull-right
-            -if user_signed_in? && current_user.id == post.user.id
-              =link_to "delete", post, method: :delete
+            .pull-right
+              -if user_signed_in? && current_user.id == post.user.id
+                =link_to "delete", post, method: :delete
         .panel-body
           %h5
             =truncate(post.content, length: 250, separator: ' ') { link_to  ' read more',  post_path(post.id) }
@@ -35,13 +37,25 @@
             %br
               Tags:
               = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
+      -#%br
         -##tag_cloud
         -#  - tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class|
         -#    = link_to tag.name, tag_path(tag.name), class: css_class
         -#Tags: #{raw article.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')}
         -#Tags: #{raw article.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ')}
-
+  .col-md-2
+  .col-md-2
+    .col-md-10
+      .list-group
+      - @tags.each do |t|
+        .list-group-item.clap
+          .center
+            = link_to t, tag_path(t.name)
 .center
   = paginate @posts,:theme => 'twitter-bootstrap-3'
-
+-#.pull-right
+-#  .list-group
+-#    - @tags.each do |t|
+-#      .list-group-item.clap
+-#        = link_to t, tag_path(t.name)
 

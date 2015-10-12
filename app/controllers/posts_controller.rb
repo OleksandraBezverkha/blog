@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     @post=Post.new
   end
   def index
-    @tags = Post.tag_counts_on(:tags).most_used(15)
+    @tags = Post.tag_counts_on(:tags).most_used(10)
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).page(params[:page]).per(3)
     else

@@ -13,7 +13,7 @@
 class Post < ActiveRecord::Base
  # attr_accessible :content, :name, :tag_list
   acts_as_taggable
-  paginates_per 5
+ # paginates_per 5
   belongs_to :user
   has_many :comments,dependent: :destroy
   default_scope ->{order('created_at DESC')}
