@@ -1,5 +1,10 @@
 -#-if flash[:error]
 -#  =flash[:error]
+.center
+  = search_form_for @search do |f|
+    = f.search_field :tags_name_cont
+    = f.submit "Search"
+%br
 .row
   .col-md-4
   .col-md-4
@@ -46,6 +51,8 @@
   .col-md-2
   .col-md-2
     .col-md-10
+      .center
+        %strong 10 popular tags
       .list-group
       - @tags.each do |t|
         .list-group-item.clap
