@@ -1,13 +1,15 @@
 -#-if flash[:error]
 -#  =flash[:error]
-.center
-  = search_form_for @search do |f|
-    = f.search_field :tags_name_cont
-    = f.submit "Search"
 %br
 .row
   .col-md-4
   .col-md-4
+    = search_form_for @search do |f|
+      = f.search_field :tags_name_cont,class:"form-control " ,maxlength:"64", placeholder:"Search"
+      .search
+        = f.submit "Search",class:"btn btn-default btn-sm"
+      %br
+      %br
     -@posts.each do|post|
       .ava
         -if post.user.image.for_post.blank? || !post.user.image.for_post.file.exists?
