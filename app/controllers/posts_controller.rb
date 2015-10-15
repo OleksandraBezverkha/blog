@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def index
     @search = Post.search(params[:q])
     # @posts = @search.result(distinct: true).page(params[:page]).per(3)
-    @tags = Post.tag_counts_on(:tags)#.most_used(10)
+    @tags = Post.tag_counts_on(:tags).most_used(10)
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).page(params[:page]).per(3)
     elsif !params[:q].nil?

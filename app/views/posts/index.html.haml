@@ -5,7 +5,7 @@
   .col-md-4
   .col-md-4
     = search_form_for @search do |f|
-      = f.search_field :tags_name_cont,class:"form-control " ,maxlength:"64", placeholder:"Search"
+      = f.text_field :tags_name_cont,data: {autocomplete_source: Post.tag_counts_on(:tags).order(:name).map(&:name)},class:"form-control " ,maxlength:"64", placeholder:"Search"
       .search
         = f.submit "Search",class:"btn btn-default btn-sm"
       %br
