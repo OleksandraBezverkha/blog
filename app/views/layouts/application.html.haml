@@ -14,21 +14,21 @@
           = link_to "Blog", root_path, id: "logo"
           .navbar-right
             - if user_signed_in?
-              Hello,
+              =t :hello_user
               = succeed "" do
                 %strong= current_user.username
               -if current_user.image.small_thumb.blank? || !current_user.image.small_thumb.file.exists?
                 = image_tag("default.png", size: "30x30", alt: "Avatar",class:"img-circle")
               -else
                 = image_tag(current_user.image.small_thumb,class:"img-circle")
-              = link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link',class:"btn btn-default"
+              = link_to t(:edit_profile), edit_user_registration_path, :class => 'navbar-link',class:"btn btn-default"
               -#= link_to 'Create post', new_post_path, :class => 'navbar-link',class:"btn btn-default"
               = render  :partial =>"posts/create_post"
-              #{link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link',class:"btn btn-default"}
+              #{link_to t(:logout), destroy_user_session_path, method: :delete, :class => 'navbar-link',class:"btn btn-default"}
             - else
-              Hello,guest!
-              \#{link_to "Sign up", new_user_registration_path, :class => 'navbar-link',class:"btn btn-default"} |
-              \#{link_to "Login", new_user_session_path, :class => 'navbar-link',class:"btn btn-default"}
+              =t :hello_guest
+              \#{link_to t(:sign_up), new_user_registration_path, :class => 'navbar-link',class:"btn btn-default"} |
+              \#{link_to t(:login), new_user_session_path, :class => 'navbar-link',class:"btn btn-default"}
     - if notice
       %p.alert.alert-success= notice
     - if alert

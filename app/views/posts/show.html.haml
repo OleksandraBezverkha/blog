@@ -18,10 +18,10 @@
             =@post.title
         %span.timestamp
           =time_ago_in_words(@post.created_at)
-          ago
+          =t(:ago)
         .pull-right
           -if user_signed_in? && current_user.id == @post.user.id
-            =link_to "delete", @post, method: :delete
+            =link_to t(:delete), @post, method: :delete
       .panel-body
         %h5
           =@post.content

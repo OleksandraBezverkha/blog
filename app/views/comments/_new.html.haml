@@ -6,11 +6,12 @@
       %br
     .actions
       .pull-right
-        = f.submit "Create comment",class:"btn btn-default"
+        = f.submit t(:create_comment),class:"btn btn-default"
       %br
   -else
     .pull-right
-      %strong To comment,please
-      =link_to "Sign up", new_user_registration_path
+      %strong
+        =t(:To_comment_please)
+      =link_to t(:sign_up), new_user_registration_path
   %br
     #error_com

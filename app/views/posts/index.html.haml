@@ -5,9 +5,9 @@
   .col-md-4
   .col-md-4
     = search_form_for @search do |f|
-      = f.text_field :tags_name_cont,data: {autocomplete_source: Post.tag_counts_on(:tags).order(:name).map(&:name)},class:"form-control " ,maxlength:"64", placeholder:"Search"
+      = f.text_field :tags_name_cont,data: {autocomplete_source: Post.tag_counts_on(:tags).order(:name).map(&:name)},class:"form-control " ,maxlength:"64", placeholder:t(:search)
       .search
-        = f.submit "Search",class:"btn btn-default btn-sm"
+        = f.submit t(:search),class:"btn btn-default btn-sm"
       %br
       %br
     -@posts.each do|post|
@@ -30,10 +30,10 @@
                 =link_to post.title,post_path(post.id)
           .timestamp
             =time_ago_in_words(post.created_at)
-            ago
+            =t(:ago)
             .pull-right
               -if user_signed_in? && current_user.id == post.user.id
-                =link_to "delete", post, method: :delete
+                =link_to t(:delete), post, method: :delete
         .panel-body
           %h5
             =truncate(post.content, length: 250, separator: ' ') { link_to  ' read more',  post_path(post.id) }
@@ -54,7 +54,8 @@
   .col-md-2
     .col-md-10
       .center
-        %strong 10 popular tags
+        %strong
+          =t(:popular_tags)
       .list-group
       - @tags.each do |t|
         .list-group-item.clap

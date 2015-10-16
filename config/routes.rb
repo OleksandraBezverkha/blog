@@ -22,10 +22,11 @@
 Rails.application.routes.draw do
   devise_for :users
   #get "posts/index"
-  root  'posts#index'
-  resources :posts
-  resources :comments
-  get 'tags/:tag', to: 'posts#index', as: :tag
+  # scope "/:locale",locale: /en|ru/ do
+    root 'posts#index'
+    resources :posts
+    resources :comments
+    get 'tags/:tag', to: 'posts#index', as: :tag
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

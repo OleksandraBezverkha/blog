@@ -1,6 +1,7 @@
 -if @comments.count==0
   .center
-    %strong No comments yet
+    %strong
+      =t(:no_comments_yet)
 -else
   - @comments.each  do|comment|
     .row
@@ -23,7 +24,7 @@
               ago
             .pull-right
               -if user_signed_in?
-                =link_to "delete", comment, method: :delete, remote: true
+                =link_to t(:delete), comment, method: :delete, remote: true
           .panel-body
             %h5
               =comment.content
