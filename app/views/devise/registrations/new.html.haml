@@ -4,7 +4,8 @@
     .col-md-4
       .panel-default
         .panel-heading
-          %h3 Sign up
+          %h3
+            =t(:sign_up)
           = devise_error_messages!
           .form-group
             = f.label :username
@@ -34,5 +35,5 @@
             -else
               = image_tag(@user.image.thumb,class:"img-circle")
           .actions
-            = f.submit "Sign up",class:"btn btn-success btn-sm"
+            = f.submit t(:sign_up),class:"btn btn-success btn-sm"
             = render "devise/shared/links"

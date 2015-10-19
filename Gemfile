@@ -37,6 +37,7 @@ gem 'bootstrap-kaminari-views'
 gem 'acts-as-taggable-on'
 gem 'ransack'
 gem 'i18n'
+gem 'devise-i18n-views'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

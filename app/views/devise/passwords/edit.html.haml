@@ -5,7 +5,8 @@
     .col-md-4
       .panel-default
         .panel-heading
-          %h3 Change your password
+          %h3
+            =t(:change_your_password)
           = f.hidden_field :reset_password_token
           .form-group
             = f.label :password, "New password"
@@ -20,5 +21,5 @@
             %br/
             = f.password_field :password_confirmation, autocomplete: "off",class:"form-control"
           .actions
-            = f.submit "Change my password",class:"btn btn-default"
+            = f.submit t(:change_your_password_),class:"btn btn-default"
           = render "devise/shared/links"
