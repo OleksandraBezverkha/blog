@@ -16,10 +16,10 @@
               %h5
                 .form-group
                   =f.label t(:title)
-                  =f.text_field :title, autofocus: true,class:"form-control",:required=>"required","aria-required"=>"true",:oninvalid=>"this.setCustomValidity('Pleas enter title')",:oninput=>"setCustomValidity('')",:maxlength=>"150"
+                  =f.text_field :title, autofocus: true,class:"form-control",:required=>"required","aria-required"=>"true",:oninvalid=>t(:Pleas_enter_title),:oninput=>"setCustomValidity('')",:maxlength=>"150"
                 .form-group
                   = f.label t(:content)
-                  =f.text_area :content,class:"form-control",:required => "required","aria-required" => "true",:oninvalid => "this.setCustomValidity('Please enter content')",:oninput => "setCustomValidity('')",:maxlength=>"10000"
+                  =f.text_area :content,class:"form-control",:required => "required","aria-required" => "true",:oninvalid => t(:Please_enter_content),:oninput => "setCustomValidity('')",:maxlength=>"10000"
                 .form-group
                   = f.label t(:tag_list)
                   %br/

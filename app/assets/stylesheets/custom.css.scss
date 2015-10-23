@@ -8,13 +8,13 @@ body {
   padding-top: 120px;
 }
 
-section {
-  overflow: auto;
-}
+//section {
+//  overflow: auto;
+//}
 
-textarea {
-  resize: vertical;
-}
+//textarea {
+//  resize: vertical;
+//}
 
 .center {
   text-align: center;
@@ -149,7 +149,7 @@ a:hover, a:focus {
   //color: #491634;
 }
 .btn.btn-default.btn-sm{
-  font-size: 15px;
+  font-size: 16px;
   border-radius:1px;
 
 
@@ -175,4 +175,19 @@ a:hover, a:focus {
 ul, li {
 margin: 5px;
 padding: 0;
+}
+.avatarka{
+  text-align: center;
+  overflow: hidden;
+  width: 130px;
+  height: 30px;
+  border: 1px solid #d2cfd1;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 17px;
+}
+.avatarka:hover{
+  background: rgba(133, 135, 137, 0.3);}
+.dropdown-menu{
+  margin-right: 300px;
 }

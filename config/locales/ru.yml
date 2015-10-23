@@ -1,4 +1,7 @@
 ru:
+  Tags: "Теги:"
+  select_file: "Выбрать файл"
+  language: "Язык"
   remove_avatar: "Удалить аватар"
   avatar: "Аватар"
 #application
@@ -13,8 +16,24 @@ ru:
   delete: "удалить"
   popular_tags: "10 популярных тегов"
   ago: "назад"
+  read_more: "читать далее"
 #posts/show
-
+#valid
+  Pleas_enter_title: "this.setCustomValidity('Пожалуйста,введите заголовок')"
+  Please_enter_content: "this.setCustomValidity('Пожалуйста введите содержание')"
+####
+  confirm_my_account: "Подтвердить мой аккаунт"
+  welcome: "Добро пожаловать"
+  confirmation_instruction: " Вы можете подтвердить ваш адрес электронной почты через ссылку ниже:"
+ #reset_password_instructions
+  change_my_password: "Изменить пароль"
+  Hello: "Привет"
+  someone: "Кто-то запросил ссылку для изменения вашего пароля. Вы можете сделать это через ссылку ниже."
+  if_you: "Если вы не запрашивали этого, пожалуйста, игнорируйте это сообщение.
+            Ваш пароль не изменится, пока вы не откроете ссылку выше и не создать новый пароль."
+#unlock_instructions
+  unlock_my_account: "Разблокировать аккаунт"
+  your_account: "Ваш аккаунт был заблокирован из-за чрезмерного количества неудачных попыток входа. Нажмите на ссылку ниже, чтобы разблокировать свой аккаунт:"
 #posts/_create_post
   title: "Заголовок"
   content: "Содержание"

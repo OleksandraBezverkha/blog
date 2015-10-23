@@ -20,14 +20,18 @@
 #
 
 Rails.application.routes.draw do
-  devise_for :users
-  #get "posts/index"
-  # scope "/:locale",locale: /en|ru/ do
-    root 'posts#index'
-    resources :posts
-    resources :comments
-    get 'tags/:tag', to: 'posts#index', as: :tag
 
+   # get "posts/index"
+
+  scope "(:locale)", :locale => /en|ru/ do
+      devise_for :users
+
+      resources :posts
+      root 'posts#index'
+      resources :comments
+      get 'tags/:tag', to: 'posts#index', as: :tag
+  end
+  root to: redirect("/#{I18n.default_locale}", status: 302), as: :redirected_root
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
