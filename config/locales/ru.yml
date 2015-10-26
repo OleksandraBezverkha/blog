@@ -8,7 +8,7 @@ ru:
   hello_user: "Привет ,"
   hello_guest: "Привет,гость"
 #  sign_up: "Регистрация"
-  login: "Ввойти"
+  login: "Войти"
   edit_profile: "Редактировать профайл"
   logout: "Выйти"
 #posts/index

@@ -21,7 +21,7 @@
                 = image_tag("default.png", size: "30x30", alt: "Avatar",class:"img-circle")
               -else
                 = image_tag(current_user.image.small_thumb,class:"img-circle")
-              = link_to t(:edit_profile), edit_user_registration_path, :class => 'navbar-link',class:"btn btn-default"
+              = link_to (t(:edit_profile)+" "+image_tag("edit.png",size: "15x15")).html_safe, edit_user_registration_path, :class => 'navbar-link',class:"btn btn-default"
               -#= link_to 'Create post', new_post_path, :class => 'navbar-link',class:"btn btn-default"
               = render  :partial =>"posts/create_post"
               #{link_to t(:logout), destroy_user_session_path, method: :delete, :class => 'navbar-link',class:"btn btn-default"}
