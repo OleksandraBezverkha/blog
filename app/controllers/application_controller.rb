@@ -7,6 +7,17 @@ class ApplicationController < ActionController::Base
   def default_url_options(options = {})
     {locale: I18n.locale}
   end
+  def ensure_signup_complete
+    # Ensure we don't go into an infinite loop
+    return if action_name == 'finish_signup'
+
+    # Redirect to the 'finish_signup' page if the user
+    # email hasn't been verified yet
+    if current_user
+      redirect_to finish_signup_path(current_user)
+    end
+  end
+
   private
 
   def set_locale

@@ -4,6 +4,8 @@ ru:
   language: "Язык"
   remove_avatar: "Удалить аватар"
   avatar: "Аватар"
+  sign_in_with: "Войти через"
+  signed_up_but_unconfirmed: "В течение нескольких минут вы получите письмо с инструкциями по подтверждению вашей учётной записи."
 #application
   hello_user: "Привет ,"
   hello_guest: "Привет,гость"

@@ -1,0 +1,8 @@
+email: "blog.office111"
+password: "asdfghnbvcxz"
+development:
+  secret_id: "750394015107281"
+  secret_key: "fc7667e0c529661e2daf4892f779e09d"
+prodaction:
+  secret_id: "711414415658132"
+  secret_key: "6df4762838d61dee4677d4da284a72f8"

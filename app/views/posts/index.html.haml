@@ -11,15 +11,16 @@
       %br
       %br
     -@posts.each do|post|
+      %br
       .ava
+        .name
+          %strong
+            =post.user.username
         -if post.user.image.for_post.blank? || !post.user.image.for_post.file.exists?
           = image_tag("default.png", size: "50x50", alt: "Avatar",class:"img-circle")
         -else
           = image_tag(post.user.image.for_post,class:"img-circle")
-        %br
-        .name
-          %strong
-            =post.user.username
+        -#.name
       %br
       .panel.panel-default
         .panel-heading

@@ -22,17 +22,15 @@
 Rails.application.routes.draw do
 
    # get "posts/index"
-  # devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
+  devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
   scope "(:locale)", :locale => /en|ru/ do
-      devise_for :users#, skip: :omniauth_callbacks
+      devise_for :users, skip: :omniauth_callbacks
 
       resources :posts
       root 'posts#index'
       resources :comments
       get 'tags/:tag', to: 'posts#index', as: :tag
-      # devise_scope :user do
-      #   delete 'sign_out', :to => 'devise/sessions#destroy'#, :as => :destroy_user_session
-      # end
+      match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
   end
   root to: redirect("/#{I18n.default_locale}", status: 302), as: :redirected_root
   # The priority is based upon order of creation: first created -> highest priority.
