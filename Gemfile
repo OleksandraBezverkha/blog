@@ -42,6 +42,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'oauth2'
 gem 'figaro'
+gem 'activeadmin', '~> 1.0.0.pre2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
