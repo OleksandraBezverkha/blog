@@ -9,7 +9,10 @@ class UsersController < ApplicationController
       # GET /users/:id/edit
   def edit
     # authorize! :update, @user
+    # @identity=Identity.find_by(user_id: current_user.id, provider: params[:provider] )
   end
+
+
 
       # PATCH/PUT /users/:id.:format
   def update

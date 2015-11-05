@@ -6,6 +6,10 @@ ru:
   avatar: "Аватар"
   sign_in_with: "Войти через"
   signed_up_but_unconfirmed: "В течение нескольких минут вы получите письмо с инструкциями по подтверждению вашей учётной записи."
+  bound_with: "Связать с "
+  unbound_with: "Удалить связь с "
+  continue: "Продолжить"
+  successfully_destroyed_authentication: "Успешно удалена связь с "
 #application
   hello_user: "Привет ,"
   hello_guest: "Привет,гость"

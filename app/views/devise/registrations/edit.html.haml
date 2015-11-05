@@ -51,6 +51,13 @@
                 = f.check_box :remove_image
           .actions
             = f.submit t(:update),class:"btn btn-success btn-sm"
+          %br
+          - resource_class.omniauth_providers.each do |provider|
+            - @identity = bound(provider)
+            -if !@identity
+              = link_to "#{t(:bound_with)} #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider)
+            -else
+              = link_to "#{t(:unbound_with)} #{provider.to_s.titleize}",{:controller => "/identities", :action => 'destroy', :id => current_user.id, provider: provider }, method: :delete
 .row
   .col-md-4
   .col-md-4

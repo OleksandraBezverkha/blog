@@ -68,7 +68,9 @@ class User < ActiveRecord::Base
     # Note that this may leave zombie accounts (with no associated identity) which
     # can be cleaned up at a later date.
     user = signed_in_resource ? signed_in_resource : identity.user
-
+    if user.nil?
+      user = User.find_by_email(auth.info.email)
+    end
     # Create the user if needed
     # if user.nil?
     #
@@ -87,11 +89,13 @@ class User < ActiveRecord::Base
           email: auth.info.email,
           # email: "#{TEMP_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
           password: Devise.friendly_token[0,20]
-
       )
       user.skip_confirmation!
-      user.save!
-
+      # if User.exists?(:email => user.email)
+      #
+      # else
+        user.save!
+      # end
 
     end
     # end
