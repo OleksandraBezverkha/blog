@@ -45,6 +45,7 @@ class User < ActiveRecord::Base
       errors.add(:username, :invalid)
     end
   end
+
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
@@ -107,8 +108,21 @@ class User < ActiveRecord::Base
     end
     user
   end
+
+  # def login=(login)
+  #   @login = login
+  # end
   #
-  # def email_verified?
-  #   self.email && self.email !~ TEMP_EMAIL_REGEX
+  # def login
+  #   @login || self.email || self.username
+  # end
+  #
+  # def self.find_for_database_authentication(warden_conditions)
+  #   conditions = warden_conditions.dup
+  #   if login = conditions.delete(:login)
+  #     where(conditions.to_h).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+  #   else
+  #     where(conditions.to_h).first
+  #   end
   # end
 end

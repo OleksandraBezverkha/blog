@@ -21,6 +21,8 @@
 
 Rails.application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
    # get "posts/index"
   # devise_for :users, only: :omniauth_callbacks, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
   # scope "(:locale)", :locale => /en|ru/ do

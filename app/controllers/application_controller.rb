@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_filter :set_locale
+  # before_action do
+  #   resource = controller_name.singularize.to_sym
+  #   method = "#{resource}_params"
+  #   params[resource] &&= send(method) if respond_to?(method, true)
+  # end
   def default_url_options(options = {})
     {locale: I18n.locale}
   end

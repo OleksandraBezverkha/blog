@@ -1,7 +1,7 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.authentication_keys = [ :login ]
+  # config.authentication_keys = [ :login ]
   config.scoped_views = true
   config.reset_password_keys = [ :username ]
   config.confirmation_keys = [ :username ]
@@ -266,7 +266,7 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
-  config.authentication_keys = [ :login ]
+  # config.authentication_keys = [ :login ]
   config.scoped_views = true
   # config.mailer = "Devise::Mailer"
   # config.mailer_sender = "blog.office111@gmail.com"
