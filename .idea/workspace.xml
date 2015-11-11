@@ -42,50 +42,18 @@
         <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="production.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6938776">
+              <caret line="86" column="95" selection-start-line="86" selection-start-column="95" selection-end-line="86" selection-end-column="95" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="environment.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environment.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="secrets.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/secrets.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-              <folding>
-                <marker date="1447162161655" expanded="true" signature="490:652" placeholder="development:" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -95,50 +63,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.7083335">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-              <folding>
-                <marker date="1447243879489" expanded="true" signature="50:59" placeholder=".col-md-4" />
-                <marker date="1447243879489" expanded="true" signature="294:362" placeholder=".search" />
-                <marker date="1447243879489" expanded="true" signature="489:548" placeholder=".name" />
-                <marker date="1447243879489" expanded="true" signature="848:1724" placeholder=".panel.panel-default" />
-                <marker date="1447243879489" expanded="true" signature="925:1036" placeholder=".pull-left" />
-                <marker date="1447243879489" expanded="true" signature="950:1036" placeholder=".name" />
-                <marker date="1447243879489" expanded="true" signature="1328:1724" placeholder=".panel-body" />
-                <marker date="1447243879489" expanded="true" signature="2082:2091" placeholder=".col-md-2" />
-                <marker date="1447243879489" expanded="true" signature="2125:2176" placeholder=".center" />
-                <marker date="1447243879489" expanded="true" signature="2183:2194" placeholder=".list-group" />
-                <marker date="1447243879489" expanded="true" signature="2229:2310" placeholder=".list-group-item.clap" />
-                <marker date="1447243879489" expanded="true" signature="2261:2310" placeholder=".center" />
-                <marker date="1447243879489" expanded="true" signature="2311:2498" placeholder=".center" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_index.html.haml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/comments/_index.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10983264">
-              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="devise.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -192,14 +116,14 @@
         <option value="$PROJECT_DIR$/app/admin/user.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/active_admin.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/active_admin.scss" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/config/application.yml" />
         <option value="$PROJECT_DIR$/config/secrets.yml" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/views/posts/index.html.haml" />
         <option value="$PROJECT_DIR$/app/views/comments/_index.html.haml" />
+        <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -269,6 +193,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -288,6 +226,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="initializers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -928,7 +884,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
           <folding>
-            <marker date="1447162161655" expanded="true" signature="490:652" placeholder="development:" />
+            <marker date="1447162161655" expanded="true" signature="-1:-1" placeholder="development:" />
           </folding>
         </state>
       </provider>
@@ -949,34 +905,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30612245">
           <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -994,27 +926,51 @@
         <state vertical-scroll-proportion="-6.7083335">
           <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
           <folding>
-            <marker date="1447243879489" expanded="true" signature="50:59" placeholder=".col-md-4" />
-            <marker date="1447243879489" expanded="true" signature="294:362" placeholder=".search" />
-            <marker date="1447243879489" expanded="true" signature="489:548" placeholder=".name" />
-            <marker date="1447243879489" expanded="true" signature="848:1724" placeholder=".panel.panel-default" />
-            <marker date="1447243879489" expanded="true" signature="925:1036" placeholder=".pull-left" />
-            <marker date="1447243879489" expanded="true" signature="950:1036" placeholder=".name" />
-            <marker date="1447243879489" expanded="true" signature="1328:1724" placeholder=".panel-body" />
-            <marker date="1447243879489" expanded="true" signature="2082:2091" placeholder=".col-md-2" />
-            <marker date="1447243879489" expanded="true" signature="2125:2176" placeholder=".center" />
-            <marker date="1447243879489" expanded="true" signature="2183:2194" placeholder=".list-group" />
-            <marker date="1447243879489" expanded="true" signature="2229:2310" placeholder=".list-group-item.clap" />
-            <marker date="1447243879489" expanded="true" signature="2261:2310" placeholder=".center" />
-            <marker date="1447243879489" expanded="true" signature="2311:2498" placeholder=".center" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".col-md-4" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".search" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".name" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".panel.panel-default" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".pull-left" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".name" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".panel-body" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".col-md-2" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".center" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".list-group" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".list-group-item.clap" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".center" />
+            <marker date="1447243879489" expanded="true" signature="-1:-1" placeholder=".center" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/comments/_index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10983264">
+        <state vertical-scroll-proportion="-4.375">
           <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6938776">
+          <caret line="86" column="95" selection-start-line="86" selection-start-column="95" selection-end-line="86" selection-end-column="95" />
           <folding />
         </state>
       </provider>
