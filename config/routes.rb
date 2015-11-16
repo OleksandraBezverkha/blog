@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   # scope "(:locale)", :locale => /en|ru/ do
       devise_for :users,controllers: {omniauth_callbacks: 'omniauth_callbacks'}
       resources :posts
-       resources :identities
+      resources :identities
+      resources :events
       root 'posts#index'
       resources :comments
       get 'tags/:tag', to: 'posts#index', as: :tag

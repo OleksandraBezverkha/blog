@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   def create
     @comment=current_user.comments.create(comment_params)
     @post = @comment.post
-    @comments = Comment.where(post_id: @comment.post_id).page(params[:page]).per(3)
+    @comments = Comment.where(post_id: @comment.post_id).page(params[:page]).per(10)
     if @comment.save
       respond_to do |format|
         format.html { redirect_to root_path }
@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
     @comment=Comment.find(params[:id])
     @comment.destroy
     @post = @comment.post
-    @comments = Comment.where(post_id: @comment.post_id).page(params[:page]).per(3)
+    @comments = Comment.where(post_id: @comment.post_id).page(params[:page]).per(10)
     respond_to do |format|
       format.html { redirect_to root_path }
       format.js

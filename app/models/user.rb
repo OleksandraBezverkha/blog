@@ -22,11 +22,10 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  TEMP_EMAIL_PREFIX = 'change@me'
-  TEMP_EMAIL_REGEX = /\Achange@me/
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :identities, dependent: :destroy
+  has_many :events, dependent: :destroy
   attr_accessor :login
   devise :database_authenticatable, :confirmable,:registerable,
          :recoverable, :rememberable, :trackable, :validatable,:omniauthable,:authentication_keys => [:login]
@@ -37,7 +36,7 @@ class User < ActiveRecord::Base
             } # etc.
   validate :validate_username
   # attr_accessible :user_id, :name, :image, :remote_image_url
-  validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
+  # validate :validate_email#, :without => TEMP_EMAIL_REGEX, on: :update
 
   mount_uploader :image, ImageUploader
   def validate_username
@@ -92,12 +91,7 @@ class User < ActiveRecord::Base
           password: Devise.friendly_token[0,20]
       )
       user.skip_confirmation!
-      # if User.exists?(:email => user.email)
-      #
-      # else
-        user.save!
-      # end
-
+      user.save!
     end
     # end
 
@@ -109,20 +103,4 @@ class User < ActiveRecord::Base
     user
   end
 
-  # def login=(login)
-  #   @login = login
-  # end
-  #
-  # def login
-  #   @login || self.email || self.username
-  # end
-  #
-  # def self.find_for_database_authentication(warden_conditions)
-  #   conditions = warden_conditions.dup
-  #   if login = conditions.delete(:login)
-  #     where(conditions.to_h).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
-  #   else
-  #     where(conditions.to_h).first
-  #   end
-  # end
 end

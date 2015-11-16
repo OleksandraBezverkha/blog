@@ -10,6 +10,13 @@ ru:
   unbound_with: "Удалить связь с "
   continue: "Продолжить"
   successfully_destroyed_authentication: "Успешно удалена связь с "
+  Username: "Имя"
+  Events: "События"
+  Date: "Дата"
+  Post: "Пост"
+  Action: "Действие"
+  create: "Создание"
+  destroy: "Удаление"
 #application
   hello_user: "Привет ,"
   hello_guest: "Привет,гость"

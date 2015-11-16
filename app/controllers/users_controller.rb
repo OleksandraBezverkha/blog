@@ -12,7 +12,9 @@ class UsersController < ApplicationController
     # @identity=Identity.find_by(user_id: current_user.id, provider: params[:provider] )
   end
 
-
+  def index
+    @users=User.all
+  end
 
       # PATCH/PUT /users/:id.:format
   def update
@@ -36,12 +38,8 @@ class UsersController < ApplicationController
       if @user.update(user_params)
         sign_in(@user, :bypass => true)
         if @user.email != params[:user][:email]
-        # @user.skip_reconfirmation!
-          p "0"*100
-          # @user.send_confirmation_instructions
           redirect_to root_path, notice: "#{t(:signed_up_but_unconfirmed)}"
         else
-          p "1"*100
           @user.unconfirmed_email = @user.email
           @user.send_confirmation_instructions
           redirect_to root_path, notice: "#{t(:signed_up_but_unconfirmed)}"

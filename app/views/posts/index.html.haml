@@ -14,9 +14,8 @@
       -cache ([post,locale: I18n.locale]) do
         %br
         .ava
-          .name
-            %strong
-              =post.user.username
+          %strong.name
+            =post.user.username
           -if post.user.image.for_post.blank? || !post.user.image.for_post.file.exists?
             = image_tag("default.png", size: "50x50", alt: "Avatar",class:"img-circle")
           -else

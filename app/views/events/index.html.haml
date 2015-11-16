@@ -1,0 +1,35 @@
+.container
+  .row.col-md-10.col-md-offset-1.custyle
+    %table.table.table-hover.table-striped.custab
+      %thead
+        %tr
+          %th #
+          %th #{t(:Username)}
+          %th #{t(:Post)}
+          %th #{t(:Action)}
+          %th #{t(:Date)}
+      -@events.each do |event|
+        %tr
+          %td
+            =event.id
+          %td
+            -if event.user.image.small_thumb.blank? || !event.user.image.small_thumb.file.exists?
+              = image_tag("default.png", size: "30x30", alt: "Avatar",class:"img-circle")
+            -else
+              = image_tag(event.user.image.small_thumb,class:"img-circle")
+            %strong.name
+              =event.user.username
+          %td
+            -if check(event.post_id)
+              = link_to event.post_title,post_path(event.post_id)
+            -else
+              = event.post_title
+          %td
+            =event.name
+          %td
+            =event.created_at
+    .center
+      = paginate @events,:theme => 'twitter-bootstrap-3'#,
+      #:params => { :controller => 'events', :action => 'index'}
+
+

@@ -31,6 +31,13 @@ en:
   unbound_with: "Unbound with"
   continue: "Continue"
   successfully_destroyed_authentication: "Successfully destroyed authentication with"
+  Username: "Username"
+  Events: "Events"
+  Date: "Date"
+  Post: "Post"
+  Action: "Action"
+  create: "Create"
+  destroy: "Destroy"
 #application
   hello_user: "Hello ,"
   hello_guest: "Hello,guest"
