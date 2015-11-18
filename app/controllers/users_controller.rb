@@ -43,7 +43,7 @@ class UsersController < ApplicationController
           @user.unconfirmed_email = @user.email
           @user.send_confirmation_instructions
           redirect_to root_path, notice: "#{t(:signed_up_but_unconfirmed)}"
-        end
+         end
       else
         @show_errors = true
       end

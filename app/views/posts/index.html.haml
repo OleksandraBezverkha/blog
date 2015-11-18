@@ -11,17 +11,16 @@
       %br
       %br
     -@posts.each do|post|
+      %br
+      %strong.ava.name
+        =post.user.username
+      -if post.user.image.for_post.blank? || !post.user.image.for_post.file.exists?
+        = image_tag("default.png", size: "50x50", alt: "Avatar",class:"img-circle")
+      -else
+        = image_tag(post.user.image.for_post,class:"img-circle")
+      -#.name
+      %br
       -cache ([post,locale: I18n.locale]) do
-        %br
-        .ava
-          %strong.name
-            =post.user.username
-          -if post.user.image.for_post.blank? || !post.user.image.for_post.file.exists?
-            = image_tag("default.png", size: "50x50", alt: "Avatar",class:"img-circle")
-          -else
-            = image_tag(post.user.image.for_post,class:"img-circle")
-          -#.name
-        %br
         .panel.panel-default
           .panel-heading
             -#.row
@@ -53,14 +52,19 @@
   .col-md-2
   .col-md-2
     .col-md-10
-      .center
-        %strong
-          =t(:popular_tags)
+
       .list-group
-      - @tags.each do |t|
-        .list-group-item.clap
+        -if @tags.exists?
           .center
-            = link_to t, tag_path(t.name)
+            %strong
+              =t(:popular_tags)
+          - @tags.each do |t|
+            .list-group-item.clap
+              .center
+                = link_to t, tag_path(t.name)
+        -else
+          %strong
+            =t(:No_any_tags)
 .center
   = paginate @posts,:theme => 'twitter-bootstrap-3'
 -#.pull-right

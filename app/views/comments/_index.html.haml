@@ -4,18 +4,18 @@
       =t(:no_comments_yet)
 -else
   - @comments.each  do|comment|
-    -cache ([ comment, locale: I18n.locale])  do
-      .row
-        .col-md-2
-          .center
-            -if comment.user.image.for_post.blank? || !comment.user.image.for_post.file.exists?
-              = image_tag("default.png", size: "50x50", alt: "Avatar",class:"img-circle")
-            -else
-              = image_tag(comment.user.image.for_post,class:"img-circle")
-            %br
-            %span.name
-              %strong
-                =comment.user.username
+    .row
+      .col-md-2
+        .center
+          -if comment.user.image.for_post.blank? || !comment.user.image.for_post.file.exists?
+            = image_tag("default.png", size: "50x50", alt: "Avatar",class:"img-circle")
+          -else
+            = image_tag(comment.user.image.for_post,class:"img-circle")
+          %br
+          %span.name
+            %strong
+              =comment.user.username
+      -cache ([ comment, locale: I18n.locale])  do
         .col-md-9
           .panel.panel-default
             .panel-heading

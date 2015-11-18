@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_filter :set_locale
+  before_action :conf_email, only: [:edit, :create]
   # before_action do
   #   resource = controller_name.singularize.to_sym
   #   method = "#{resource}_params"
@@ -19,6 +20,11 @@ class ApplicationController < ActionController::Base
     # Redirect to the 'finish_signup' page if the user
     # email hasn't been verified yet
     if current_user
+      redirect_to finish_signup_path(current_user)
+    end
+  end
+  def conf_email
+    if current_user && current_user.unconfirmed_email != nil ||current_user && current_user.confirmation_token == nil  # && illegal_pages.include?(action_name)  action_name != 'finish_signup'
       redirect_to finish_signup_path(current_user)
     end
   end

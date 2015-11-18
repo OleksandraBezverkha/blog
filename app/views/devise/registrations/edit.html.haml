@@ -5,7 +5,7 @@
       .panel-default
         .panel-heading
           %h3
-            =t(:edit)
+            =t(:edit_profile)
           = devise_error_messages!
           .form-group
             = f.label :username
@@ -55,9 +55,9 @@
           - resource_class.omniauth_providers.each do |provider|
             - @identity = bound(provider)
             -if !@identity
-              = link_to "#{t(:bound_with)} #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider)
+              = link_to "#{t(:bound_with)} #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class:"btn btn-#{provider}"
             -else
-              = link_to "#{t(:unbound_with)} #{provider.to_s.titleize}",{:controller => "/identities", :action => 'destroy', :id => current_user.id, provider: provider }, method: :delete
+              = link_to "#{t(:unbound_with)} #{provider.to_s.titleize}",{:controller => "/identities", :action => 'destroy', :id => current_user.id, provider: provider }, method: :delete,  class:"btn btn-#{provider}"
 .row
   .col-md-4
   .col-md-4

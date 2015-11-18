@@ -38,6 +38,7 @@ en:
   Action: "Action"
   create: "Create"
   destroy: "Destroy"
+  No_any_tags: "No any tags"
 #application
   hello_user: "Hello ,"
   hello_guest: "Hello,guest"

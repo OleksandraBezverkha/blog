@@ -17,6 +17,7 @@ ru:
   Action: "Действие"
   create: "Создание"
   destroy: "Удаление"
+  No_any_tags: "Пока еще нету тегов"
 #application
   hello_user: "Привет ,"
   hello_guest: "Привет,гость"
